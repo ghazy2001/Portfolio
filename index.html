@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahmoud GhaZy Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="settings-box">
+      <div class="settings-gear">
+        <i class="fa fa-gear"></i>
+      </div>
+
+      <div class="settings-container">
+        <div class="option-box">
+          <h4>colors option</h4>
+          <ul class="colors-list">
+            <li class="active" data-color="rgb(20, 100, 94)"></li>
+            <li data-color="rgb(160, 6, 6)"></li>
+            <li data-color="rgb(78, 120, 245)"></li>
+            <li data-color="rgb(71, 2, 56)"></li>
+            <li data-color="rgb(102, 102, 102)"></li>
+          </ul>
+        </div>
+        <div class="option-box">
+          <h4>backgrounds option</h4>
+          <div class="random-background">
+            <span class="yes active" data-background="yes">Yes</span>
+            <span class="no" data-background="no">No</span>
+          </div>
+        </div>
+        <div class="option-box">
+          <h4>bullets option</h4>
+          <div class="bullets-option">
+            <span class="yes active" data-display="show">Show</span>
+            <span class="no" data-display="hide">Hide</span>
+          </div>
+        </div>
+        <button class="reset-options">Reset Options</button>
+      </div>
+    </div>
+    <div class="nav-bullets">
+      <div class="bullet" data-section=".landing-page">
+        <div class="tooltip">Home</div>
+      </div>
+      <div class="bullet" data-section=".about-us">
+        <div class="tooltip">About Us</div>
+      </div>
+      <div class="bullet" data-section=".skills">
+        <div class="tooltip">Skills</div>
+      </div>
+      <div class="bullet" data-section=".gallery">
+        <div class="tooltip">Gallery</div>
+      </div>
+      <div class="bullet" data-section=".timeline">
+        <div class="tooltip">Timeline</div>
+      </div>
+      <div class="bullet" data-section=".features">
+        <div class="tooltip">Features</div>
+      </div>
+      <div class="bullet" data-section=".testimonials">
+        <div class="tooltip">Testimonials</div>
+      </div>
+    </div>
+    <div class="landing-page">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="header-area">
+          <div class="logo">Mahmoud GhaZy Portfolio</div>
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#" class="active" data-section=".about-us">About</a>
+              </li>
+              <li><a href="#" data-section=".skills">Skills</a></li>
+              <li><a href="#" data-section=".gallery">Projects</a></li>
+              <li><a href="#" data-section=".timeline">Timeline</a></li>
+              <li><a href="#" data-section=".features">Services</a></li>
+              <li><a href="#" data-section=".contact-us">Contact us</a></li>
+            </ul>
+            <button class="toggle-minu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="introduction-text">
+        <h1>Welcome to <span>My Portfolio</span></h1>
+        <p>
+          I am a passionate developer and designer dedicated to creating
+          beautiful and functional web experiences. Explore my work and skills
+          below.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="about-us">
+        <div class="info-box">
+          <h2>About Me</h2>
+          <p>
+            I have graduated from the Faculty of Commerce, Tanta University,
+            Department of Accounting and Finance (2023) , i got experience in
+            web development, specializing in front-end technologies. I enjoy
+            solving complex problems and building user-friendly applications.
+          </p>
+        </div>
+        <div class="image-box">
+          <img src="image/aboutus.webp" alt="About Me" />
+        </div>
+      </div>
+    </div>
+    <div class="skills">
+      <div class="container">
+        <h2>My Skills</h2>
+        <div class="skill-box">
+          <div class="skill-name">HTML</div>
+          <div class="skill-progress">
+            <span data-progress="85%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">CSS</div>
+          <div class="skill-progress">
+            <span data-progress="75%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-progress">
+            <span data-progress="80%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">React</div>
+          <div class="skill-progress">
+            <span data-progress="70%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">Next.js</div>
+          <div class="skill-progress">
+            <span data-progress="65%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">ajax</div>
+          <div class="skill-progress">
+            <span data-progress="50%"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="images-box">
+          <img src="image/12.jpg.png" alt="Project 1" />
+          <img src="image/13.jpg.png" alt="Project 2" />
+          <img src="image/14.jpg.png" alt="Project 3" />
+          <img src="image/15.jpg.png" alt="Project 4" />
+          <img src="image/16.jpg.png" alt="Project 5" />
+          <img src="image/17.jpg.png" alt="Project 6" />
+          <img src="image/18.jpg.png" alt="Project 7" />
+          <img src="image/19.jpg.png" alt="Project 8" />
+          <img src="image/20.jpg.png" alt="Project 9" />
+          <img src="image/21.jpg.png" alt="Project 10" />
+        </div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="container">
+        <div class="timeline-content">
+          <div class="year">2018</div>
+          <div class="left">
+            <div class="content">
+              <h3>Started Learning Web Development</h3>
+              <p>
+                Began my journey into web development by learning HTML and CSS
+              </p>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+          <div class="year">2020</div>
+          <div class="right">
+            <div class="content">
+              <h3>University enrollment</h3>
+              <p>
+                joined Faculty of Commerce, Tanta University, Department of
+                Accounting and Finance .
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="year">2021</div>
+          <div class="left">
+            <div class="content">
+              <h3>Work while studying</h3>
+              <p>
+                started working as accountant and manager for Marvel Wood for
+                manufacturing and trading modern wood.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="year">2023</div>
+          <div class="right">
+            <div class="content">
+              <h3>Finishing university</h3>
+              <p>
+                graduated from the Faculty of Commerce, Tanta University,
+                Department of Accounting and Finance.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="year">2024</div>
+          <div class="left">
+            <div class="content">
+              <h3>Improving Myself</h3>
+              <p>
+                quited my jop and opened my own shop to Trading modern kitchen
+                and dressing-room accessories.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="left">
+            <div class="content">
+              <h3>keep Improving</h3>
+              <p>
+                countinue learning front-end developing and improving my skills.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div class="features">
+      <h2>Services</h2>
+      <div class="container">
+        <div class="featbox">
+          <img src="image/img1.jpg" alt="Service 1" />
+          <h4>Web Development</h4>
+          <p>Building responsive and modern websites tailored to your needs.</p>
+        </div>
+        <div class="featbox">
+          <img src="image/img2.jpg" alt="Service 2" />
+          <h4>UI/UX Design</h4>
+          <p>
+            Designing intuitive and engaging user interfaces and experiences.
+          </p>
+        </div>
+        <div class="featbox">
+          <img src="image/img3.jpg" alt="Service 3" />
+          <h4>Consulting</h4>
+          <p>Providing expert advice to improve your digital presence.</p>
+        </div>
+        <div class="featbox">
+          <img src="image/img4.jpg" alt="Service 4" />
+          <h4>SEO Optimization</h4>
+          <p>Enhancing your website's visibility on search engines.</p>
+        </div>
+        <div class="featbox">
+          <img src="image/img5.jpg" alt="Service 5" />
+          <h4>Content Creation</h4>
+          <p>Creating compelling content to engage your audience.</p>
+        </div>
+        <div class="featbox">
+          <img src="image/img6.jpeg" alt="Service 6" />
+          <h4>Maintenance & Support</h4>
+          <p>Ensuring your website runs smoothly and stays up to date.</p>
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="overlay"></div>
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form action="">
+          <div class="left">
+            <input type=" text" placeholder="Your Name" name="username" />
+            <input type=" text" placeholder="Your Phone" name="phone" />
+            <input type=" text" placeholder="Your Email" name="email" />
+            <input type=" text" placeholder="Subject" name="subject" />
+          </div>
+          <div class="right">
+            <textarea name="message" placeholder="Your Massage"></textarea>
+            <input type="submit" value="Send" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer">@created by GhaZy</div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
