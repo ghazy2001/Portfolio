@@ -73,18 +73,23 @@ randombge.forEach((span) => {
 
 let page = document.querySelector(".landing-page");
 
-let imgarray = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
+let imgarray = [
+  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80",
+];
 
 function randoming() {
   if (backgroundoption === true) {
     // Set background immediately on function call
     let randomnumber = Math.floor(Math.random() * imgarray.length);
-    page.style.backgroundImage = 'url("image/' + imgarray[randomnumber] + '")';
+    page.style.backgroundImage = 'url("' + imgarray[randomnumber] + '")';
 
     theinterval = setInterval(() => {
       let randomnumber = Math.floor(Math.random() * imgarray.length);
-      page.style.backgroundImage =
-        'url("image/' + imgarray[randomnumber] + '")';
+      page.style.backgroundImage = 'url("' + imgarray[randomnumber] + '")';
     }, 5000);
   }
 }
@@ -92,32 +97,35 @@ function randoming() {
 randoming();
 
 let ourskills = document.querySelector(".skills");
-window.onscroll = function () {
-  /// let skillsoffsetTop = ourskills.offsetTop;
-  //let skillsouterHeight = ourskills.offsetHeight;
-  //let windowheight = this.innerHeight;
-  //let windowscrolltop = this.pageYOffset;
-  //if (windowscrolltop > skillsoffsetTop + skillsouterHeight - windowheight) {
-  // let allskills = document.querySelectorAll(
-  //   ".skill-box .skill-progress span"
-  //);
-  // allskills.forEach((skill) => {
-  // skill.style.width = skill.dataset.progress;
-  //});
-  // }
-  if (window.scrollY >= 800) {
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom >= 0
+  );
+}
+window.addEventListener("scroll", () => {
+  if (isElementInViewport(ourskills)) {
     let allskills = document.querySelectorAll(
       ".skill-box .skill-progress span"
     );
-
     allskills.forEach((skill) => {
       skill.style.width = skill.dataset.progress;
     });
+  } else {
+    // Reset progress bars when skills section is not in viewport
+    let allskills = document.querySelectorAll(
+      ".skill-box .skill-progress span"
+    );
+    allskills.forEach((skill) => {
+      skill.style.width = "0%";
+    });
   }
-};
+});
 
 let ourgallery = document.querySelectorAll(".gallery img");
 ourgallery.forEach((img) => {
+  img.loading = "lazy";
   img.addEventListener("click", (e) => {
     let overlay = document.createElement("div");
     overlay.className = "popup-overlay";
@@ -206,6 +214,8 @@ document.querySelector(".reset-options").onclick = function () {
   localStorage.removeItem("background-option");
   window.location.reload();
 };
+
+// Additional cleanup and organization can be done here if needed
 let togglebtn = document.querySelector(".toggle-minu");
 let tlinks = document.querySelector(".links");
 togglebtn.onclick = function (e) {

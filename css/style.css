@@ -7,19 +7,39 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.settings-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
 .settings-box {
   position: fixed;
   left: -200px;
   top: 0;
   background-color: rgba(248, 245, 245, 0.82);
   width: 200px;
-  z-index: 1000;
+  z-index: 1100;
   min-height: 100vh;
   transition: 0.3s;
   border: 1px solid #eee;
 }
 .settings-box.open {
   left: 0;
+}
+body.overlay-active > *:not(.settings-box):not(.settings-overlay) {
+  pointer-events: none;
+  user-select: none;
 }
 .settings-box .settings-gear {
   position: absolute;
@@ -109,8 +129,9 @@ body {
 }
 .landing-page {
   min-height: 100vh;
-  background-image: url(image/img3.jpg);
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80");
   background-size: cover;
+  background-position: center center;
   position: relative;
 }
 
@@ -206,21 +227,27 @@ body {
 }
 
 .introduction-text h1 {
-  font-size: 34px;
+  font-size: 38px;
+  font-weight: 700;
   margin: 0 0 12px;
+  letter-spacing: 1.5px;
 }
 @media (max-width: 575px) {
   .introduction-text h1 {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
 .introduction-text h1 span {
   color: var(--main-color);
 }
 .introduction-text p {
-  line-height: 1.6;
-  font-size: 15px;
+  line-height: 1.8;
+  font-size: 16px;
   margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.5px;
 }
 @media (max-width: 991px) {
   .header-area .links {
@@ -239,6 +266,8 @@ body {
     width: 95%;
     border-radius: 4px;
     text-align: right;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
   }
   .header-area .links.open li a {
     color: var(--main-color);
@@ -301,17 +330,24 @@ body {
   background-color: #eee;
 }
 .skills h2 {
-  font-weight: bold;
-  font-size: 30px;
+  font-weight: 700;
+  font-size: 32px;
   color: var(--main-color);
   margin: 0 0 50px;
   text-align: center;
+  letter-spacing: 1px;
 }
 .skills .skill-box {
   background-color: #fff;
   display: flex;
   padding: 15px;
   margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  transition: background-color 0.3s ease;
+}
+.skills .skill-box:hover {
+  background-color: #f0f0f0;
 }
 @media (max-width: 767px) {
   .skills .skill-box {
@@ -360,17 +396,50 @@ body {
   margin: 0 0 50px;
   text-align: center;
 }
-.gallery .images-box {
-  text-align: center;
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 15px;
 }
-.gallery .images-box img {
-  width: 220px;
-  height: 170px;
-  padding: 3px;
-  background: color #f6f6f6;
-  border: 1px solid #ccc;
-  margin: 5px;
+.project-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  padding: 15px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+}
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.2);
+}
+.project-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.project-item h3 {
+  font-size: 20px;
+  margin: 10px 0 8px;
+  color: var(--main-color);
+}
+.project-item p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+.project-item a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+.project-item a:hover {
+  text-decoration: underline;
 }
 
 .popup-overlay {
@@ -564,6 +633,14 @@ body {
 @media (max-width: 575px) {
   .features .featbox {
     width: 95%;
+  }
+  .landing-page {
+    background-position: center center;
+  }
+  .introduction-text {
+    position: static;
+    transform: none;
+    padding: 20px;
   }
 }
 .features .featbox img {
@@ -781,14 +858,18 @@ body {
 .contact form textarea {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 12px 15px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   background-color: rgba(88, 83, 83, 0.363);
+  border-radius: 4px;
+  font-size: 14px;
+  transition: outline 0.3s ease;
 }
 .contact form input:not([type="submit"]):focus,
 .contact form textarea:focus {
-  outline: 1.5px solid var(--main-color);
+  outline: 2px solid var(--main-color);
+  background-color: #fff;
 }
 .contact form input {
   height: 40px;
