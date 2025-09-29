@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahmoud GhaZy Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="settings-overlay"></div>
+    <div class="settings-box">
+      <div class="settings-gear">
+        <i class="fa fa-gear"></i>
+      </div>
+
+      <div class="settings-container">
+        <div class="option-box">
+          <h4>colors option</h4>
+          <ul class="colors-list">
+            <li class="active" data-color="rgb(20, 100, 94)"></li>
+            <li data-color="rgb(160, 6, 6)"></li>
+            <li data-color="rgb(78, 120, 245)"></li>
+            <li data-color="rgb(71, 2, 56)"></li>
+            <li data-color="rgb(102, 102, 102)"></li>
+          </ul>
+        </div>
+        <div class="option-box">
+          <h4>backgrounds option</h4>
+          <div class="random-background">
+            <span class="yes active" data-background="yes">Yes</span>
+            <span class="no" data-background="no">No</span>
+          </div>
+        </div>
+        <div class="option-box">
+          <h4>bullets option</h4>
+          <div class="bullets-option">
+            <span class="yes active" data-display="show">Show</span>
+            <span class="no" data-display="hide">Hide</span>
+          </div>
+        </div>
+        <button class="reset-options">Reset Options</button>
+      </div>
+    </div>
+    <div class="nav-bullets">
+      <div class="bullet" data-section=".landing-page">
+        <div class="tooltip">Home</div>
+      </div>
+      <div class="bullet" data-section=".about-us">
+        <div class="tooltip">About Us</div>
+      </div>
+      <div class="bullet" data-section=".skills">
+        <div class="tooltip">Skills</div>
+      </div>
+      <div class="bullet" data-section=".gallery">
+        <div class="tooltip">Gallery</div>
+      </div>
+      <div class="bullet" data-section=".timeline">
+        <div class="tooltip">Timeline</div>
+      </div>
+      <div class="bullet" data-section=".features">
+        <div class="tooltip">Features</div>
+      </div>
+      <div class="bullet" data-section=".contact">
+        <div class="tooltip">Contact Us</div>
+      </div>
+    </div>
+    <div class="landing-page">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="header-area">
+          <div class="logo">Mahmoud GhaZy Portfolio</div>
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#" class="active" data-section=".about-us">About</a>
+              </li>
+              <li><a href="#" data-section=".skills">Skills</a></li>
+              <li><a href="#" data-section=".gallery">Projects</a></li>
+              <li><a href="#" data-section=".timeline">Timeline</a></li>
+              <li><a href="#" data-section=".features">Services</a></li>
+              <li><a href="#" data-section=".contact-us">Contact us</a></li>
+            </ul>
+            <button class="toggle-minu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="introduction-text">
+        <h1>Welcome to <span>My Portfolio</span></h1>
+        <p>
+          I am a passionate developer and designer dedicated to creating
+          beautiful and functional web experiences. Explore my work and skills
+          below.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="about-us">
+        <div class="info-box">
+          <h2>About Me</h2>
+          <p>
+            I have graduated from the Faculty of Commerce, Tanta University,
+            Department of Accounting and Finance (2023) , i got experience in
+            web development, specializing in front-end technologies. I enjoy
+            solving complex problems and building user-friendly applications.
+          </p>
+        </div>
+        <div class="image-box">
+          <img src="image/aboutus.webp" alt="About Me" />
+        </div>
+      </div>
+    </div>
+    <div class="skills">
+      <div class="container">
+        <h2>My Skills</h2>
+        <div class="skill-box">
+          <div class="skill-name">HTML</div>
+          <div class="skill-progress">
+            <span data-progress="85%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">CSS</div>
+          <div class="skill-progress">
+            <span data-progress="75%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-progress">
+            <span data-progress="80%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">React</div>
+          <div class="skill-progress">
+            <span data-progress="70%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">Next.js</div>
+          <div class="skill-progress">
+            <span data-progress="40%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">ajax</div>
+          <div class="skill-progress">
+            <span data-progress="50%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">MUI</div>
+          <div class="skill-progress">
+            <span data-progress="70%"></span>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-name">R3F,Gsap</div>
+          <div class="skill-progress">
+            <span data-progress="50%"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="projects-list">
+          <div class="project-item">
+            <a href="https://validation-form-red.vercel.app/">
+              <img src="image/12.jpg.png" alt="Project 1" />
+            </a>
+            <h3>Project 1: Validation Form</h3>
+            <p>
+              A responsive form validation project built with HTML, CSS, and
+              JavaScript to enhance user input accuracy (HTML , css,
+              JavaScript).
+            </p>
+            <a href="https://validation-form-red.vercel.app/">View Project</a>
+          </div>
+          <div class="project-item">
+            <a href="https://quiz-app-pied-xi.vercel.app/">
+              <img src="image/13.jpg.png" alt="Project 2" />
+            </a>
+            <h3>Project 2: Quiz app</h3>
+            <p>
+              A quiz application developed using React, featuring dynamic
+              questions and interactive UI(HTML , css, JavaScript).
+            </p>
+            <a href="https://quiz-app-pied-xi.vercel.app/">View Project</a>
+          </div>
+          <div class="project-item">
+            <a href="https://ghazy-accessories.vercel.app/">
+              <img src="image/14.jpg.png" alt="Project 3" />
+            </a>
+            <h3>Project 3: Portfolio Website + shop</h3>
+            <p>
+              A combined portfolio and e-commerce shop website showcasing skills
+              and products with a modern design(react,mui,react-router).
+            </p>
+            <a href="https://ghazy-accessories.vercel.app/">View Project</a>
+          </div>
+          <div class="project-item">
+            <a href="https://mui-weather.vercel.app/">
+              <img src="image/15.jpg.png" alt="Project 4" />
+            </a>
+            <h3>Project 4: Weather app</h3>
+            <p>
+              A weather application built with Material-UI, providing real-time
+              weather updates and forecasts (React , Mui , weather-api).
+            </p>
+            <a href="https://mui-weather.vercel.app/">View Project</a>
+          </div>
+          <div class="project-item">
+            <a href="https://weatherapp-tan-mu.vercel.app/">
+              <img src="image/16.jpg.png" alt="Project 5" />
+            </a>
+            <h3>Project 5: Normal weather app</h3>
+            <p>
+              A simple weather app using vanilla JavaScript and API integration
+              for current weather data (Html,Css,JavaScript).
+            </p>
+            <a href="https://weatherapp-tan-mu.vercel.app/">View Project</a>
+          </div>
+          <div class="project-item">
+            <a
+              href="https://nextjs-dashboard-sigma-kohl-wvrahynsgr.vercel.app/dashboard"
+            >
+              <img src="image/17.jpg.png" alt="Project 6" />
+            </a>
+            <h3>Project 6: Next.js Dashboard</h3>
+            <p>
+              A dashboard interface built with Next.js, featuring data
+              visualization and user management (trainning).
+            </p>
+            <a
+              href="https://nextjs-dashboard-sigma-kohl-wvrahynsgr.vercel.app/dashboard"
+              >View Project</a
+            >
+          </div>
+          <div class="project-item">
+            <a href="https://todo-list-mui-two.vercel.app/">
+              <img src="image/19.jpg.png" alt="Project 7" />
+            </a>
+            <h3>Project 7: To DO list</h3>
+            <p>
+              A React-based task management app with drag-and-drop functionality
+              for efficient task organization (React,use-context).
+            </p>
+            <a href="https://todo-list-mui-two.vercel.app/">View Project</a>
+          </div>
+          <div class="project-item">
+            <a href="https://slide-list.vercel.app/">
+              <img src="image/20.jpg.png" alt="Project 8" />
+            </a>
+            <h3>Project 8: Simple slide-list</h3>
+            <p>
+              A responsive slide-list component built with JavaScript for smooth
+              content navigation (Html,Css,JavaScript).
+            </p>
+            <a href="https://slide-list.vercel.app/">View Project</a>
+          </div>
+          <div class="project-item">
+            <a href="https://todo-list2-bice-six.vercel.app/">
+              <img src="image/21.jpg.png" alt="Project 9" />
+            </a>
+            <h3>Project 9: Simple to do list</h3>
+            <p>
+              A minimalist to-do list application with essential features for
+              task tracking and management (HTML , css, JavaScript).
+            </p>
+            <a href="https://todo-list2-bice-six.vercel.app/">View Project</a>
+          </div>
+          <div class="project-item">
+            <a href="https://iphone-r3f.vercel.app/">
+              <img src="image/22.jpg" alt="Project 9" />
+            </a>
+            <h3>Project 10: iPhone 3D Showcase</h3>
+            <p>
+              An interactive 3D visualization of an iPhone model using React
+              Three Fiber and Three.js. This project highlights advanced WebGL
+              rendering, realistic lighting, and responsive design for immersive
+              product presentation (React, Three.js, R3F).
+            </p>
+
+            <a href="https://iphone-r3f.vercel.app/">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="container">
+        <div class="timeline-content">
+          <div class="year">2018</div>
+          <div class="left">
+            <div class="content">
+              <h3>Started Learning Web Development</h3>
+              <p>
+                Began my journey into web development by learning HTML and CSS
+              </p>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+          <div class="year">2020</div>
+          <div class="right">
+            <div class="content">
+              <h3>University enrollment</h3>
+              <p>
+                joined Faculty of Commerce, Tanta University, Department of
+                Accounting and Finance .
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="year">2021</div>
+          <div class="left">
+            <div class="content">
+              <h3>Work while studying</h3>
+              <p>
+                started working as accountant and manager for Marvel Wood for
+                manufacturing and trading modern wood.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="year">2023</div>
+          <div class="right">
+            <div class="content">
+              <h3>Finishing university</h3>
+              <p>
+                graduated from the Faculty of Commerce, Tanta University,
+                Department of Accounting and Finance.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="year">2024</div>
+          <div class="left">
+            <div class="content">
+              <h3>Improving Myself</h3>
+              <p>
+                quited my jop and opened my own shop to Trading modern kitchen
+                and dressing-room accessories.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="left">
+            <div class="content">
+              <h3>keep Improving</h3>
+              <p>
+                countinue learning front-end developing and improving my skills.
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div class="features">
+      <h2>Services</h2>
+      <div class="container">
+        <div class="featbox">
+          <img
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=96&q=80"
+            alt="Web Development"
+          />
+          <h4>Web Development</h4>
+          <p>Building responsive and modern websites tailored to your needs.</p>
+        </div>
+        <div class="featbox">
+          <img
+            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=96&q=80"
+            alt="UI/UX Design"
+          />
+          <h4>UI/UX Design</h4>
+          <p>
+            Designing intuitive and engaging user interfaces and experiences.
+          </p>
+        </div>
+        <div class="featbox">
+          <img
+            src="https://images.unsplash.com/photo-1497493292307-31c376b6e479?auto=format&fit=crop&w=96&q=80"
+            alt="Consulting"
+          />
+          <h4>Consulting</h4>
+          <p>Providing expert advice to improve your digital presence.</p>
+        </div>
+        <div class="featbox">
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=96&q=80"
+            alt="SEO Optimization"
+          />
+          <h4>SEO Optimization</h4>
+          <p>Enhancing your website's visibility on search engines.</p>
+        </div>
+        <div class="featbox">
+          <img
+            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=96&q=80"
+            alt="Content Creation"
+          />
+          <h4>Content Creation</h4>
+          <p>Creating compelling content to engage your audience.</p>
+        </div>
+        <div class="featbox">
+          <img
+            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=96&q=80"
+            alt="Maintenance & Support"
+          />
+          <h4>Maintenance & Support</h4>
+          <p>Ensuring your website runs smoothly and stays up to date.</p>
+        </div>
+        <div class="clear-fix"></div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="overlay"></div>
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form action="" aria-label="Contact form">
+          <div class="left">
+            <label for="username" class="sr-only">Your Name</label>
+            <input
+              id="username"
+              type="text"
+              placeholder="Your Name"
+              name="username"
+              aria-required="true"
+            />
+            <label for="phone" class="sr-only">Your Phone</label>
+            <input
+              id="phone"
+              type="tel"
+              placeholder="Your Phone"
+              name="phone"
+              aria-required="true"
+            />
+            <label for="email" class="sr-only">Your Email</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Your Email"
+              name="email"
+              aria-required="true"
+            />
+            <label for="subject" class="sr-only">Subject</label>
+            <input
+              id="subject"
+              type="text"
+              placeholder="Subject"
+              name="subject"
+            />
+          </div>
+          <div class="right">
+            <label for="message" class="sr-only">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+              aria-required="true"
+            ></textarea>
+            <input type="submit" value="Send" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer">@created by GhaZy</div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
